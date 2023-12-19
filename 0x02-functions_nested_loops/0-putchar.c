@@ -1,4 +1,4 @@
-#include "myheaders.h"
+#include "main.h"
 /**
  * main - A program to print _putchar using funcion
  * Return: 0 for success
