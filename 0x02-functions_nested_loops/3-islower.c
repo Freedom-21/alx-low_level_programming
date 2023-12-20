@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _islower - a function to detect lower letters
- * @c - a letter to be detected
+ * @c: a letter to be detected
  * Return: 0 for success
  */
 int _islower(int c)
