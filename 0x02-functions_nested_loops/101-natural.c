@@ -9,13 +9,16 @@ int main(void)
 
 	sum = 0;
 
-	for (i = 1; i < 1024; i++)
+	while (i < 1024)
 	{
-		if ((i % 3 == 0) || (i % 5))
+		if ((i % 3 == 0) || (i % 5 == 0))
+		{
 			sum = sum + i;
+		}
+		i++;
 	}
 
-	printf("The sum equals : %d", sum);
+	printf("%d", sum);
 	printf("\n");
 
 	return (0);
