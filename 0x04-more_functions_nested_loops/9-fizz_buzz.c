@@ -10,12 +10,13 @@ int main(void)
 
 	for (i = 1; i <= 100; i++)
 	{
-		if (i == 100)
-			continue;
-
 		if (i % 15 == 0)
 		{
 			printf("FizzBuzz");
+
+			if (i == 100)
+				continue;
+
 			printf(" ");
 		}
 		else if (i % 3 == 0)
