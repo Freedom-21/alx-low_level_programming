@@ -14,6 +14,8 @@ void puts2(char *str)
 	{
 		if (str[i] >= 32 && str[i] <= 126)
 			_putchar(str[i]);
+		if (str[i + 1] == '\0')
+			break;
 	}
 	_putchar('\n');
 }
