@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 
 /**
  * read_textfile - a function that reads a text file and prints to the
