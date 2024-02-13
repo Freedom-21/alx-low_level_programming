@@ -24,11 +24,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	while ((bytes_read = read(fd, buffer, sizeof(buffer))) > 0)
 	{
-		if (bytes_read < 0)
-		{
-			close(fd);
-			return (0);
-		}
 		if (bytes_read < letters)
 			letters = bytes_read;
 
@@ -42,7 +37,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 		tot_printed += bytes_printed;
 
-		if (bytes_read == -1)
+		if (bytes_read == SIZE_MAX)
 		{
 			close(fd);
 			return (0);
