@@ -23,7 +23,7 @@ void error_exit(int code, const char *format, ...)
 
 int main(int argc, char *argv[])
 {
-	int fd_from, fd_to;
+	int fd_from, fd_to = -1;
 	ssize_t bytes_read, bytes_written;
 	char buffer[BUFFER_SIZE];
 
