@@ -9,6 +9,7 @@
 void error_exit(int code, const char *format, ...)
 {
 	va_list args;
+
 	va_start(args, format);
 	dprintf(2, format, args);
 	va_end(args);
@@ -44,17 +45,17 @@ int main(int argc, char *argv[])
 		if (bytes_written == -1)
 			error_exit(99, "Error: Can't write to %s\n", argv[2]);
 	}
-	
+
 	if (bytes_read == -1)
 	{
 		error_exit(98, "Error: Can't read from file %s\n", argv[1]);
 	}
-	
+
 	if (close(fd_from) == -1)
 	{
 		error_exit(100, "Error: Can't close fd %d\n", fd_from);
 	}
-	
+
 	if (close(fd_to) == -1)
 	{
 		error_exit(100, "Error: Can't close fd %d\n", fd_to);
